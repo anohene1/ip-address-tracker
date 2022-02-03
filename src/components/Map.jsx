@@ -20,18 +20,22 @@ const Container = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  
+  @media (max-width: 549px) {
+    height: calc(100vh - 320px);
+  }
 `;
 
 function MyComponent({longitude, latitude}) {
     const map = useMap();
-    map.flyTo([latitude, longitude], 13);
+    map.flyTo([latitude, longitude], 16);
     return null;
 }
 
 function Map({longitude, latitude}) {
     return (
         <Container>
-            <MapContainer center={[latitude, longitude]} zoom={13} scrollWheelZoom={false} style={{ width: '100%', height: '100%' }}>
+            <MapContainer center={[latitude, longitude]} zoom={16} scrollWheelZoom={false} style={{ width: '100%', height: '100%' }}>
                 <MyComponent latitude={latitude} longitude={longitude} />
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

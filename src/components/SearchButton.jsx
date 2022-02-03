@@ -9,6 +9,10 @@ background-color: black;
   border-top-right-radius: 10px;
   color: white;
   cursor: pointer;
+
+  @media (max-width: 549px) {
+    width: 50px;
+  }
 `;
 
 export default SearchButton;

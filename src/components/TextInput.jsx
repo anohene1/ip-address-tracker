@@ -12,6 +12,10 @@ const TextInput = styled.input`
   font-size: 16px;
   font-weight: 400;
   color: hsl(0, 0%, 59%);
+
+  @media (max-width: 549px) {
+    width: calc(100% - 50px);
+  }
 `;
 
 export default TextInput;

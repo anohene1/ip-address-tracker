@@ -9,6 +9,10 @@ const Detail = styled.div`
   &:first-of-type {
     border-left: none;
   }
+  
+  @media (max-width: 549px) {
+    min-height: fit-content;
+  }
 `;
 
 export default Detail;
