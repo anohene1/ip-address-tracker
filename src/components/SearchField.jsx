@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SearchField = styled.form`
   max-width: 50%;
   min-width: 400px;
-  display: block;
+  display: flex;
   margin: 20px auto;
 
   @media (max-width: 549px) {

@@ -9,6 +9,14 @@ background-color: black;
   border-top-right-radius: 10px;
   color: white;
   cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  
+  &:hover {
+    background-color: hsl(0, 0%, 17%);
+  }
 
   @media (max-width: 549px) {
     width: 50px;

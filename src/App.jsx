@@ -81,7 +81,7 @@ function App() {
                 <Title>IP Address Tracker</Title>
                 <SearchField onSubmit={handleSubmit}>
                     <TextInput type='text' placeholder='Search for any IP Address or domain' onChange={handleTextChange} value={state.ipAddress} name='ipAddress' />
-                    <SearchButton>▷</SearchButton>
+                    <SearchButton>Go</SearchButton>
                 </SearchField>
             </Hero>
             <Details ip={state.ip} location={state.location} timezone={state.timezone} isp={state.isp}/>
