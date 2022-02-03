@@ -10,7 +10,12 @@ const DetailsContainer = styled.div`
   display: grid;
   align-content: center;
   grid-template-columns: repeat(4, 1fr);
-  margin: -75px auto 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  z-index: 3;
 `;
 
 export default DetailsContainer;

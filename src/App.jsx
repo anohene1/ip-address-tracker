@@ -5,6 +5,8 @@ import TextInput from "./components/TextInput";
 import SearchButton from "./components/SearchButton";
 import {useState} from "react";
 import Details from "./components/Details";
+import Map from "./components/Map";
+import {TileLayer, MapContainer, Marker, Popup} from "react-leaflet";
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         console.log(ipAddress);
     }
 
+
+
   return (
     <div className="App">
         <Hero>
@@ -29,6 +33,7 @@ function App() {
             </SearchField>
         </Hero>
         <Details/>
+        <Map/>
     </div>
   );
 }

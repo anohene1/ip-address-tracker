@@ -7,3 +7,12 @@ body {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
+
+.App {
+    height: 100vh;
+}
+
+.leaflet-container {
+    width: 50vh;
+    height: 50vh;
+}
