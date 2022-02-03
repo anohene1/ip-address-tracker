@@ -6,6 +6,10 @@ const DetailHeading = styled.p`
   letter-spacing: 2px;
   color: hsl(0, 0%, 59%);
   margin: 0;
+  
+  @media (max-width: 549px) {
+    font-size: 11px;
+  }
 `;
 
 export default DetailHeading;

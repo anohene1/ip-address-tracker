@@ -22,6 +22,7 @@ const DetailsContainer = styled.div`
   @media (max-width: 549px) {
     text-align: center;
     min-width: 90%;
+    padding: 20px 0;
   }
 `;
 
