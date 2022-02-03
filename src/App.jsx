@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import Details from "./components/Details";
 import Map from "./components/Map";
 import {isIP} from "is-ip";
+import Loading from "./components/Loading";
 
 function App() {
 
@@ -72,15 +73,21 @@ function App() {
 
   return (
     <div className="App">
-        <Hero>
-            <Title>IP Address Tracker</Title>
-            <SearchField onSubmit={handleSubmit}>
-                <TextInput type='text' placeholder='Search for any IP Address or domain' onChange={handleTextChange} value={state.ipAddress} name='ipAddress' />
-                <SearchButton>▷</SearchButton>
-            </SearchField>
-        </Hero>
-        <Details ip={state.ip} location={state.location} timezone={state.timezone} isp={state.isp}/>
-        <Map latitude={state.latitude} longitude={state.longitude}/>
+        {
+            state.ip === '' ?
+                <Loading/> :
+                <>
+            <Hero>
+                <Title>IP Address Tracker</Title>
+                <SearchField onSubmit={handleSubmit}>
+                    <TextInput type='text' placeholder='Search for any IP Address or domain' onChange={handleTextChange} value={state.ipAddress} name='ipAddress' />
+                    <SearchButton>▷</SearchButton>
+                </SearchField>
+            </Hero>
+            <Details ip={state.ip} location={state.location} timezone={state.timezone} isp={state.isp}/>
+            <Map latitude={state.latitude} longitude={state.longitude}/>
+        </>}
+
     </div>
   );
 }
