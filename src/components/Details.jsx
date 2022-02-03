@@ -3,25 +3,26 @@ import Detail from "./Detail";
 import DetailHeading from "./DetailHeading";
 import DetailBody from "./DetailBody";
 
-function Details() {
+function Details({ip, location, timezone, isp}) {
+
     return (
 
             <DetailsContainer>
                 <Detail>
                     <DetailHeading>IP address</DetailHeading>
-                    <DetailBody>192.168.40.41</DetailBody>
+                    <DetailBody>{ip}</DetailBody>
                 </Detail>
                 <Detail>
                     <DetailHeading>Location</DetailHeading>
-                    <DetailBody>Brooklyn, NY 10001</DetailBody>
+                    <DetailBody>{location}</DetailBody>
                 </Detail>
                 <Detail>
                     <DetailHeading>Timezone</DetailHeading>
-                    <DetailBody>192.168.40.41</DetailBody>
+                    <DetailBody>UTC {timezone}</DetailBody>
                 </Detail>
                 <Detail>
                     <DetailHeading>ISP</DetailHeading>
-                    <DetailBody>192.168.40.41</DetailBody>
+                    <DetailBody>{isp}</DetailBody>
                 </Detail>
             </DetailsContainer>
     );
